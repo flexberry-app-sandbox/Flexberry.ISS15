@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Пользователь",
+  "name": "IISISS15ПользовательE",
+  "className": "ПользовательE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-i-s-s15-пользователь",
+      "modelProjection": "ПользовательE"
+    }
+  ]
+}

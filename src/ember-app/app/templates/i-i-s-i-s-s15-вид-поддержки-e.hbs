@@ -1,0 +1,89 @@
+<h3 class="ui header">{{t "forms.i-i-s-i-s-s15-вид-поддержки-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.наименование
+      class=(if (v-get validationModel "наименование" "isInvalid") "error")
+      label=(t "forms.i-i-s-i-s-s15-вид-поддержки-e.наименование-caption")
+      data-test-i-i-s-i-s-s15-вид-поддержки-e-наименование=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "наименование" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.описание
+      class=(if (v-get validationModel "описание" "isInvalid") "error")
+      label=(t "forms.i-i-s-i-s-s15-вид-поддержки-e.описание-caption")
+      data-test-i-i-s-i-s-s15-вид-поддержки-e-описание=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "описание" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.номерПоддержки
+      class=(if (v-get validationModel "номерПоддержки" "isInvalid") "error")
+      label=(t "forms.i-i-s-i-s-s15-вид-поддержки-e.номерПоддержки-caption")
+      data-test-i-i-s-i-s-s15-вид-поддержки-e-номерПоддержки=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "номерПоддержки" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-i-s-s15-вид-поддержки-e.пользователь-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.пользователь
+      displayAttributeName="фИО"
+      autocomplete=true
+      relationName="пользователь"
+      projection="ПользовательL"
+      title=(t "forms.i-i-s-i-s-s15-вид-поддержки-e.пользователь-caption")
+      readonly=readonly
+      componentName="пользовательLookup"
+      class=(if (v-get validationModel "пользователь" "isInvalid") "error")
+      data-test-i-i-s-i-s-s15-вид-поддержки-e-пользователь=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "пользователь" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-i-s-s15-вид-поддержки-e.условие-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="условиеGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.условие
+      content=model.условие
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "условие" "isInvalid") "error")
+      data-test-i-i-s-i-s-s15-вид-поддержки-e-условие=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "условие" "message")}}
+  </div>
+</form>

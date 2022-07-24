@@ -1,0 +1,36 @@
+﻿{
+  "applicationCaption": "I s s15",
+  "applicationTitle": "I s s15",
+  "items": [
+    {
+      "link": null,
+      "menuName": "i-s-s15",
+      "caption": "ISS15",
+      "title": "ISS15",
+      "children": [
+        {
+          "link": "i-i-s-i-s-s15-вид-поддержки-l",
+          "menuName": null,
+          "caption": "Вид поддержки",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-i-s-s15-пользователь-l",
+          "menuName": null,
+          "caption": "Пользователь",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-i-s-s15-условие-l",
+          "menuName": null,
+          "caption": "УсловиеL",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

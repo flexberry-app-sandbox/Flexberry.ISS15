@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-i-s-s15-условие-e",
+  "editForm": "i-i-s-i-s-s15-условие-e",
+  "external": false,
+  "caption": "",
+  "name": "IISISS15УсловиеL",
+  "className": "УсловиеL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-i-s-s15-условие",
+      "modelProjection": "УсловиеL"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Пользователь",
+      "projection": "ПользовательL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Вид поддержки",
+  "name": "IISISS15ВидПоддержкиE",
+  "className": "ВидПоддержкиE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-i-s-s15-вид-поддержки",
+      "modelProjection": "ВидПоддержкиE"
+    }
+  ]
+}

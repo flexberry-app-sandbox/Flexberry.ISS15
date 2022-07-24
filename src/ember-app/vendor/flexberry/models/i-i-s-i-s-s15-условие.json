@@ -1,0 +1,77 @@
+﻿{
+  "name": "IISISS15Условие",
+  "modelName": "i-i-s-i-s-s15-условие",
+  "className": "Условие",
+  "nameSpace": "IIS.ISS15",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "наименование",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерПоддержки",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "видПоддержки",
+      "relatedTo": "i-i-s-i-s-s15-вид-поддержки",
+      "inverse": "условие"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "УсловиеE",
+      "modelName": "i-i-s-i-s-s15-условие",
+      "attrs": [
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "номерПоддержки",
+          "caption": "Номер поддержки",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "УсловиеL",
+      "modelName": "i-i-s-i-s-s15-условие",
+      "attrs": [
+        {
+          "name": "наименование",
+          "caption": "",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
